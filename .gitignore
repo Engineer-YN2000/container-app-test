@@ -4,6 +4,7 @@ __pycache__/
 *.pyc
 .vscode/
 *Dockerfile*.test
+.ruff_cache/
 
 target/
 pom.xml.tag
