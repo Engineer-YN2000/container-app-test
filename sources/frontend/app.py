@@ -1,7 +1,9 @@
+import os
+
 import streamlit as st
 import requests
 
-BACKEND_URL = "http://backend:8080/hello"
+BACKEND_URL = os.environ.get("BACKEND_URL", "http://backend:8080/hello")
 
 st.title("マルチコンテナ サンプルアプリ 🚀")
 
