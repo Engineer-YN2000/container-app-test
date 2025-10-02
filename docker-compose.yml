@@ -3,14 +3,14 @@ version: '3.8'
 services:
   backend:
     build: ./sources/backend
+    image: ${ACR_NAME}.azurecr.io/backend:${tag}
     ports:
       - "8080:8080"
-    container_name: my-java-backend
 
   frontend:
     build: ./sources/frontend
+    image: ${ACR_NAME}.azurecr.io/frontend:${tag}
     ports:
       - "8501:8501"
-    container_name: my-streamlit-ui
     depends_on:
       - backend
